@@ -25,13 +25,15 @@
           <a href="#mission">Mission</a>
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-grid">
+        <div class="hero-wrap">
+          <div class="hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">Jacob &amp; Brennen</p>
             <h1 id="hero-title">The future is now… <em>sort of.</em></h1>
@@ -41,7 +43,7 @@
             </p>
             <p class="hero-cta">
               <a class="btn btn-primary" href="#projects">What we’re building</a>
-              <a class="btn btn-ghost" href="#about">Meet us</a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
             </p>
           </div>
           <figure class="hero-poster">
@@ -52,6 +54,7 @@
               alt="Two Dudes and AI — Jacob and Brennen with a friendly robot, movie poster style"
             />
           </figure>
+          </div>
         </div>
       </section>
 
@@ -130,12 +133,35 @@
           </div>
         </div>
       </section>
+
+      <section id="contact" class="section section-contact">
+        <div class="section-inner contact-inner">
+          <h2>Contact</h2>
+          <p class="section-intro contact-intro">
+            Questions, ideas, or partnership inquiries—we read everything.
+          </p>
+          <div class="contact-cards">
+            <a class="contact-card" href="mailto:hello@twodudesandai.com">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">hello@twodudesandai.com</span>
+            </a>
+            <div class="contact-card contact-card-static">
+              <span class="contact-label">Web</span>
+              <span class="contact-value">twodudesandai.com</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
         <p class="footer-brand">© <span id="year"></span> Two Dudes and AI</p>
-        <p class="footer-domain">twodudesandai.com</p>
+        <div class="footer-links">
+          <a href="mailto:hello@twodudesandai.com">hello@twodudesandai.com</a>
+          <span class="footer-sep" aria-hidden="true">·</span>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </footer>
 
