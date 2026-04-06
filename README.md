@@ -4,11 +4,11 @@ Static site for [twodudesandai.com](https://twodudesandai.com).
 
 ## Hero image
 
-Add your movie-poster image as:
+The hero image is:
 
-`images/hero.png`
+`images/twodudesai.png`
 
-(Replace the file; keep the same name so `index.html` does not need edits.)
+(Replace that file to update the poster; `index.html` points at it.)
 
 ## Local preview
 
