@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Two Dudes and AI — Jacob & Brennen building thoughtful AI products. The future is now… sort of."
+    />
+    <title>Two Dudes and AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#">Two Dudes <span class="logo-accent">and AI</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#mission">Mission</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Jacob &amp; Brennen</p>
+            <h1 id="hero-title">The future is now… <em>sort of.</em></h1>
+            <p class="lede">
+              We build and invest in AI products that feel human—practical tools with
+              personality, not hype.
+            </p>
+            <p class="hero-cta">
+              <a class="btn btn-primary" href="#projects">What we’re building</a>
+              <a class="btn btn-ghost" href="#about">Meet us</a>
+            </p>
+          </div>
+          <figure class="hero-poster">
+            <img
+              src="images/hero.png"
+              width="900"
+              height="1200"
+              alt="Two Dudes and AI — Jacob and Brennen with a friendly robot, movie poster style"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="mission" class="section section-mission">
+        <div class="section-inner">
+          <h2>Mission</h2>
+          <p class="mission-text">
+            We started <strong>Two Dudes and AI</strong> to bridge the gap between what AI
+            promises and what people actually need day to day. Our mission is simple: ship
+            useful software, stay curious, and never take ourselves too seriously—while
+            still doing the work right.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-projects">
+        <div class="section-inner">
+          <h2>What we’re invested in</h2>
+          <p class="section-intro">
+            A snapshot of where we’re putting time and energy right now. We’ll keep this
+            updated as things evolve.
+          </p>
+          <ul class="project-cards">
+            <li class="project-card">
+              <h3>Internal tools &amp; experiments</h3>
+              <p>
+                We’re prototyping workflows and products that combine practical automation
+                with clear UX—so teams can move faster without losing the human touch.
+              </p>
+              <span class="badge">In progress</span>
+            </li>
+            <li class="project-card">
+              <h3>Community &amp; content</h3>
+              <p>
+                Sharing what we learn as we build: demos, write-ups, and the occasional
+                honest take on what’s overhyped vs. what’s worth your attention.
+              </p>
+              <span class="badge badge-soon">Coming soon</span>
+            </li>
+            <li class="project-card">
+              <h3>Partnerships</h3>
+              <p>
+                We’re open to collaborating with founders and teams who care about
+                thoughtful AI—reach out if that sounds like you.
+              </p>
+              <span class="badge badge-open">Open to chat</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="section section-about">
+        <div class="section-inner about-grid">
+          <div>
+            <h2>About us</h2>
+            <p class="section-intro">
+              Two friends, one robot aesthetic, and a shared belief that the best tech
+              feels approachable.
+            </p>
+          </div>
+          <div class="bios">
+            <article class="bio">
+              <h3>Jacob</h3>
+              <p>
+                Co-founder focused on product, partnerships, and keeping the big picture
+                in focus while we execute.
+              </p>
+            </article>
+            <article class="bio">
+              <h3>Brennen</h3>
+              <p>
+                Co-founder focused on building, shipping, and making sure what we release
+                is something we’re proud to put our names on.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">© <span id="year"></span> Two Dudes and AI</p>
+        <p class="footer-domain">twodudesandai.com</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
