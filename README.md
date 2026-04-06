@@ -1,51 +1,52 @@
 # Two Dudes and AI — website
 
-Static site for [twodudesandai.com](https://twodudesandai.com).
+Static site for [twodudesandai.com](https://twodudesandai.com), deployed with **Netlify** from **GitHub**.
 
-## Hero image
+## 1. Push to GitHub (do this first)
 
-The hero image is:
-
-`images/twodudesai.png`
-
-(Replace that file to update the poster; `index.html` points at it.)
-
-## Local preview
-
-Open `index.html` in a browser, or run a quick server:
+1. On GitHub, create a **new repository** (e.g. `twodudesandai-website`). Do **not** add a README, `.gitignore`, or license (this repo already has them).
+2. In this folder on your machine:
 
 ```bash
-cd /path/to/this/repo
-python3 -m http.server 8080
-```
-
-Then visit `http://localhost:8080`.
-
-## GitHub repository
-
-1. Create a new repository on GitHub (e.g. `twodudesandai-website`).
-2. In this folder:
-
-```bash
-git init
-git add .
-git commit -m "Initial site: mission, projects, about, hero"
-git branch -M main
+cd /Users/brennenstudenc/Desktop/Twodudes
 git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
 git push -u origin main
 ```
 
-## Hosting (GitHub Pages)
+Use **HTTPS** instead of SSH if you prefer:
 
-The repo includes a `CNAME` file with `twodudesandai.com` so GitHub Pages can serve your custom domain after you connect it.
+`git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git`
 
-1. Repo **Settings → Pages**.
-2. Source: **Deploy from a branch**, branch `main`, folder `/ (root)`.
-3. Under **Custom domain**, enter **twodudesandai.com** (the `CNAME` file should match). Configure DNS at your registrar (see [GitHub Pages custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)).
+## 2. Connect Netlify
 
-Alternatives: [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/) by connecting the same repo.
+1. Sign in at [Netlify](https://www.netlify.com/) (GitHub login is fine).
+2. **Add new site → Import an existing project → GitHub**, authorize Netlify if asked, pick this repository.
+3. Leave **build command** empty. Set **publish directory** to **`.`** (a dot = site root). The included `netlify.toml` does this for you.
+4. Deploy. Netlify gives you a random `something.netlify.app` URL to verify the site.
+
+## 3. Custom domain (twodudesandai.com)
+
+1. In Netlify: **Site configuration → Domain management → Add a domain** → enter `twodudesandai.com` and `www.twodudesandai.com` if you want both.
+2. Follow Netlify’s **DNS** instructions for your registrar:
+   - Usually an **apex** record (A or ALIAS) for `twodudesandai.com` and a **CNAME** for `www` pointing at Netlify.
+3. Turn on **HTTPS** in Netlify (it provisions a certificate after DNS propagates; can take a few minutes to hours).
+
+Remove or update any old DNS records that pointed the domain elsewhere (e.g. previous GitHub Pages records).
+
+## Local preview
+
+```bash
+cd /Users/brennenstudenc/Desktop/Twodudes
+python3 -m http.server 8080
+```
+
+Open `http://localhost:8080`.
+
+## Hero image
+
+`images/twodudesai.png` — replace the file to change the poster; `index.html` references it.
 
 ## Edit copy
 
-- **Mission / projects / bios:** edit the text in `index.html`.
-- **Styles:** `styles.css` (colors are in `:root`).
+- **Content:** `index.html`
+- **Styles:** `styles.css` (`:root` for colors)
