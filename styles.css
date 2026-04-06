@@ -356,21 +356,112 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.35rem 1.5rem;
+  overflow: hidden;
 }
 
-.bio h3 {
+.bio-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.35rem 1.5rem;
+  display: block;
+  position: relative;
+  transition: background 0.15s ease;
+}
+
+.bio-summary::-webkit-details-marker {
+  display: none;
+}
+
+.bio-summary::marker {
+  display: none;
+  content: "";
+}
+
+.bio-summary:hover,
+.bio-summary:focus-visible {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.bio-summary:focus {
+  outline: none;
+}
+
+.bio-summary:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: -2px;
+}
+
+.bio-name {
+  display: block;
   font-family: var(--font-display);
   font-size: 1.125rem;
+  font-weight: 700;
   margin: 0 0 0.5rem;
   color: var(--accent-blue);
 }
 
-.bio p {
-  margin: 0;
+.bio-teaser {
+  display: block;
+  margin: 0 4rem 0 0;
   font-size: 0.975rem;
   color: var(--text-muted);
+  line-height: 1.55;
 }
+
+.bio-hint {
+  position: absolute;
+  right: 1.35rem;
+  bottom: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 3rem;
+  text-align: right;
+}
+
+.bio-hint-more,
+.bio-hint-less {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.bio-hint-more {
+  color: var(--accent-blue-dim);
+}
+
+.bio-hint-less {
+  display: none;
+  color: var(--accent-blue);
+}
+
+.bio[open] .bio-hint-more {
+  display: none;
+}
+
+.bio[open] .bio-hint-less {
+  display: inline;
+}
+
+.bio-expanded {
+  padding: 0 1.5rem 1.35rem;
+  border-top: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.bio-expanded p {
+  margin: 0;
+  padding-top: 1rem;
+  font-size: 0.975rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+</think>
+Fixing the `.bio-hint` styles — the previous edit was overly complex. Simplifying.
+
+<｜tool▁calls▁begin｜><｜tool▁call▁begin｜>
+Read
 
 .site-footer {
   border-top: 1px solid var(--border);
